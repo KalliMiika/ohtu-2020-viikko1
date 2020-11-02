@@ -15,6 +15,7 @@ public class Varasto {
             this.tilavuus = 0.0;  // => käyttökelvoton varasto
         }
         saldo = 0;     // oletus: varasto on tyhjä
+        //jokin muutos
     }
 
     public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
