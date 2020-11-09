@@ -68,7 +68,8 @@ public class Main {
         tee5();
     }
     
-    private static void tee5() {double saatiin = olutta.otaVarastosta(1000.0);
+    private static void tee5() {
+        double saatiin = olutta.otaVarastosta(1000.0);
         System.out.println("saatiin " + saatiin);
         System.out.println("Olutvarasto: " + olutta);
 
