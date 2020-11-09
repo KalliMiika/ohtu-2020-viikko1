@@ -4,11 +4,18 @@ import ohtu.ohtuvarasto.Varasto;
 
 public class Main {
 
+    private static Varasto mehua;
+    private static Varasto olutta;
+    
     public static void main(String[] args) {
 
-        Varasto mehua = new Varasto(100.0);
-        Varasto olutta = new Varasto(100.0, 20.2);
+        mehua = new Varasto(100.0);
+        olutta = new Varasto(100.0, 20.2);
 
+        tee1();
+        
+    }
+    private static void tee1() {
         System.out.println("Luonnin jälkeen:");
         System.out.println("Mehuvarasto: " + mehua);
         System.out.println("Olutvarasto: " + olutta);
@@ -17,7 +24,10 @@ public class Main {
         System.out.println("getSaldo()     = " + olutta.getSaldo());
         System.out.println("getTilavuus    = " + olutta.getTilavuus());
         System.out.println("paljonkoMahtuu = " + olutta.paljonkoMahtuu());
-
+        tee2();
+    }
+    
+    private static void tee2() { 
         System.out.println("Mehusetterit:");
         System.out.println("Lisätään 50.7");
         mehua.lisaaVarastoon(50.7);
@@ -28,6 +38,10 @@ public class Main {
 
         System.out.println("Virhetilanteita:");
         System.out.println("new Varasto(-100.0);");
+        tee3();
+    }
+    
+    private static void tee3() {
         Varasto huono = new Varasto(-100.0);
         System.out.println(huono);
 
@@ -37,6 +51,10 @@ public class Main {
 
         System.out.println("Olutvarasto: " + olutta);
         System.out.println("olutta.lisaaVarastoon(1000.0)");
+        tee4();
+    }
+    
+    private static void tee4() {
         olutta.lisaaVarastoon(1000.0);
         System.out.println("Olutvarasto: " + olutta);
 
@@ -47,7 +65,10 @@ public class Main {
 
         System.out.println("Olutvarasto: " + olutta);
         System.out.println("olutta.otaVarastosta(1000.0)");
-        double saatiin = olutta.otaVarastosta(1000.0);
+        tee5();
+    }
+    
+    private static void tee5() {double saatiin = olutta.otaVarastosta(1000.0);
         System.out.println("saatiin " + saatiin);
         System.out.println("Olutvarasto: " + olutta);
 
